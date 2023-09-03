@@ -11,24 +11,46 @@
 ```
 
 ### Описание файлов
-* *fillit.en.pdf* - текст задания  
-* *data.csv* - Файл с данными по машинам (пробег/стоимость)  
-* *train.py* - Программа обучения модели  
-* *predict.py* - Программа, предсказывающая цену машины по ее пробегу 
+* *ft_linreg.en.pdf* - текст задания
+* *requirements.txt* - список библиотек, необходимый для работы 
+* *data.csv* - Ффайл с данными по машинам (пробег/стоимость)  
+* *train.py* - программа обучения модели  
+* *predict.py* - программа, предсказывающая цену машины по ее пробегу 
 
-<br>
 <br>
 <br>
   
 ## Запуск программ
 
-Для запуска программы из папки *<your_dir_on_local_computer>* выполните команду *fillit* с параметром *<testing_file>*, в котором содержатся тетраминки, которые нужно разместить в квадрате наименьшей размерности:
+1. После установки необходимых библиотек, сначала выполняется обучение модели на имеющихся данных запуском программы _train.py_. <br> <br>
+Чтобы вывести на экран информацию о параметрах, 
+из папки *<your_dir_on_local_computer>* выполните *train.py* с ключом _-h_:
 
 ```
-    $ ./fillit <testing_file>
+$ python3 train.py -h          
+usage: train.py [-h] [--path PATH] [--loss_control LOSS_CONTROL] [--epochs EPOCHS] [--learning_rate ETA] [--loss_graphics]
+                [--predict_data] [--animation] [--debug] [--quality]
+
+options:
+  -h, --help            show this help message and exit
+  --path PATH, -p PATH  Path to data file (data.csv by default)
+  --loss_control LOSS_CONTROL, -l LOSS_CONTROL
+                        Epoch iterations will stop while gets loss_control value(1e-12 by default)
+  --epochs EPOCHS, -e EPOCHS
+                        Set the epochs number (1500 by default)
+  --learning_rate ETA, -a ETA
+                        Set the learning rate eta (0.2 by default)
+  --loss_graphics, -g   Diagram with loss function depends on epochs
+  --predict_data, -t    Diagram with data values and line prediction
+  --animation, -c       Animation with prediction evolution while training
+  --debug, -d           Print info about each stage of program
+  --quality, -q         Model quality (R-square, MSE)
+
 ```
 
-После отработки программы будет выведен квадрат наименьшего размера, заполненный исходными тетраминками или *error* в случае невалидных исходных данных.
+2. После успешной отработки программы обучения модели будет сформирован файл _coefs.csv_, в котором будут записаны найденные коэффициенты формулы вычисления предсказания цены автомобиля по заданному пробегу. <br>
+В случае ошибки, будет выдано соответствующее сообщение. <br><br>
+3.
 
 <br>  
 
