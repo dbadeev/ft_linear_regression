@@ -11,7 +11,7 @@
 ```
 
 ### Описание файлов
-* *ft_linreg.en.pdf* - текст задания
+* *ft_linreg_en.pdf* - текст задания
 * *requirements.txt* - список библиотек, необходимый для работы 
 * *data.csv* - Ффайл с данными по машинам (пробег/стоимость)  
 * *train.py* - программа обучения модели  
@@ -72,3 +72,8 @@ options:
 ## Автор
 
 *loram (Дмитрий Бадеев)* 
+
+<br><br>
+
+## Результат в School 21
+<img width="645" alt="image" src="https://github.com/dbadeev/ft_linear_regression/assets/50623941/7a13a846-6c5f-4957-88f5-79e19c388520">
